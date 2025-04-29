@@ -5,8 +5,6 @@ const myList = document.getElementById("myList");
 let cart = [];
 
 const populateLibrary = function (array) {
-  console.log(array);
-
   if (localStorage.length != 0) {
     cart = JSON.parse(localStorage.getItem("myBooks"));
   }
@@ -19,7 +17,7 @@ const populateLibrary = function (array) {
     col.innerHTML = `<div class="card mb-2" >
     <img src="${element.img}" class="card-img-top img-fluid" style="height:15rem" alt="book cover">
     <div class="card-body">
-      <h5 class="card-title">${element.title}</h5>
+      <h5 class="card-title text-truncate">${element.title}</h5>
       <p class="card-text">${element.price}$</p>
       <button class="btn btn-primary">Scarta</button>
       <button class="btn btn-success">Compra ora</button>

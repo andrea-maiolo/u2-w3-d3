@@ -75,11 +75,11 @@ const saveCart = function () {
 };
 
 const discard = function () {
-  const cardToRemove = this.parentElement.parentElement;
+  const cardToRemove = this.parentElement.parentElement.parentElement;
   cardToRemove.remove();
 };
 
-const addToCart = function (event) {
+const addToCart = function () {
   let bookToAdd = this.parentElement.querySelector(".card-title").innerText;
   cart.push(bookToAdd);
   updateCart();
